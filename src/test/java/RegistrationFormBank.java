@@ -6,15 +6,15 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class RegistrationFormBank {
+ public class RegistrationFormBank {
     @Test
-    void OpenLinkParaBank() {
+    public void OpenLinkParaBank() {
         open("https://parabank.parasoft.com/parabank/index.htm");
-        $(new ByText("Register")).click();
     }
     @Test
     void NegativeTestRegistrationLoginFormBank () {
         OpenLinkParaBank();
+        $(new ByText("Register")).click();
         $(By.name("customer.firstName")).setValue("Igor1");
         $(By.name("customer.lastName")).setValue("Kaz1");
         $(By.name("customer.address.street")).setValue("Krylova1");
